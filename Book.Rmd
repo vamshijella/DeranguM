@@ -1,0 +1,13 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+library(readr)
+Bookdataset <- read_csv("Bookdataset.csv")
+View(Bookdataset)
+summary(Bookdataset)
+install.packages("ggplot2")
+library(ggplot2)
+ggplot(data = Bookdataset, aes(x = Age)) + geom_histogram(binwidth = 5)
+plot(Bookdataset$Age, Bookdataset$`Purchase Amount ($)`)
